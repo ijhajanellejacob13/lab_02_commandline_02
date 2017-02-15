@@ -19,6 +19,11 @@ $ echo hello
 Copy and paste the output below.
 ----------
 
+G608-19:~ student$ echo hello
+hello
+G608-19:~ student$ 
+
+
 
 
 ==========
@@ -29,6 +34,8 @@ $ echo hello there
 Copy and paste the output below.
 ----------
 
+G608-19:~ student$ echo hello there
+hello there
 
 
 ==========
@@ -39,7 +46,8 @@ $ echo good mornin'
 Copy and paste the output below.
 ----------
 
-
+G608-19:~ student$ echo good mornin'
+> 
 
 ==========
 4. Uh-oh... we're stuck!
@@ -47,7 +55,9 @@ Copy and paste the output below.
 Type [CTRL + C] to get your prompt back.
 ----------
 
-
+G608-19:~ student$ echo good mornin'
+> 
+G608-19:~ student$ 
 
 ==========
 5. Say good mornin' again with quotes!
@@ -56,7 +66,8 @@ $ echo "good mornin'"
 
 Copy and paste the output below.
 ----------
-
+G608-19:~ student$ echo "good mornin'"
+good mornin'
 
 
 ==========
@@ -67,14 +78,15 @@ $ echo *
 What happens?
 ----------
 
-
+G608-19:~ student$ echo *
+Adlm Adobe Applications Creative Cloud Files Desktop Documents Downloads Library Movies Music Pictures Public mtec1002 voteposter.indd xgen
 
 ==========
 7. Ok... that's a lot of output.  How do we clean up our screen so that it's empty again?
 
 Write the command that you used below:
 ----------
-
+clear
 
 
 ==========
@@ -88,7 +100,13 @@ $ curl google.com
 Copy and paste the output below.
 ----------
 
-
+G608-19:~ student$ curl google.com
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
 
 ==========
 9. And again.  This time, add www to the URL.
@@ -98,7 +116,8 @@ $ curl www.google.com
 Copy and paste the output below, but not the whole thing!  Just copy up to the part that has the title tags (<title>......</title>).
 ----------
 
-
+G608-19:~ student$ curl www.google.com
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en"><head><meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"><meta content="noodp" name="robots"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title>
 
 ==========
 10. That's great, but what if I want to save the file?  What flag/option and option argument would I use to download the page to a file called google.html?  Run it to download the URL www.google.com.
@@ -106,6 +125,13 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 Write the command you used below.  Also copy and paste the output below.
 ----------
 
+curl -o google.html www.google.com
+
+
+G608-19:~ student$ curl -o google.html www.google.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 10203    0 10203    0     0   9151      0 --:--:--  0:00:01 --:--:--  9158
 
 
 ==========
@@ -114,6 +140,8 @@ Write the command you used below.  Also copy and paste the output below.
 Write the command you used to determine your directory.  Also, copy and paste the output below.
 ----------
 
+G608-19:~ student$ pwd
+/Users/student
 
 
 ==========
@@ -122,7 +150,7 @@ Write the command you used to determine your directory.  Also, copy and paste th
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
 ----------
 
-
+cd ~
 
 ==========
 13. So... the lab materials are located at this url:
@@ -137,6 +165,22 @@ Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
 ----------
+curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+
+
+
+G608-19:~ student$ curl -o mtec1002-lab-02.zip http://foureyes.github.io/mtec1002-spring2014/labs/02/mtec1002-lab-02.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  935k  100  935k    0     0   804k      0  0:00:01  0:00:01 --:--:--  804k
+G608-19:~ student$ ls
+Adlm			Downloads		google.html
+Adobe			Library			mtec1002
+Applications		Movies			mtec1002-lab-02.zip
+Creative Cloud Files	Music			voteposter.indd
+Desktop			Pictures		xgen
+Documents		Public
+G608-19:~ student$ 
 
 
 
@@ -146,7 +190,7 @@ Write down the command that you used to download the file below.  Additionally, 
 Write down the command that you used to uncompress the file.
 ----------
 
-
+unzip mtec1002-lab-02.zip
 
 ==========
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
@@ -154,7 +198,7 @@ Write down the command that you used to uncompress the file.
 Copy and paste the output below.
 ----------
 
-
+no directory was created.
 
 ==========
 We're going to mess around with archiving and compressing files.  We'll make a directory with a file in it... archive and compress it.... and uncompress it elsewhere.
@@ -165,6 +209,15 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 Copy and paste the output below.
 ----------
 
+G608-19:~ student$ mkdir stuff
+G608-19:~ student$ ls
+Adlm			Library			mtec1002
+Adobe			Movies			mtec1002-lab-02
+Applications		Music			mtec1002-lab-02.zip
+Creative Cloud Files	Pictures		stuff
+Desktop			Public			voteposter.indd
+Documents		__MACOSX		xgen
+Downloads		google.html
 
 
 ==========
@@ -176,7 +229,10 @@ List the files in the directory you're currently in (which should be stuff).
 
 Copy and paste the output below.
 ----------
-
+G608-19:~ student$ cd stuff
+G608-19:stuff student$ echo "hi" > hello.txt
+G608-19:stuff student$ ls
+hello.txt
 
 
 ==========
@@ -199,7 +255,10 @@ $ tar -cvf stuff.tar stuff
 Copy and paste the output below.
 ----------
 
-
+G608-19:stuff student$ cd ..
+G608-19:~ student$ tar -cvf stuff.tar stuff
+a stuff
+a stuff/hello.txt
 
 ==========
 20. List the files in the directory you're currently in (which should be home).  
@@ -207,7 +266,16 @@ Copy and paste the output below.
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
 
-
+G608-19:~ student$ pwd
+/Users/student
+G608-19:~ student$ ls
+Adlm			Library			mtec1002
+Adobe			Movies			mtec1002-lab-02
+Applications		Music			mtec1002-lab-02.zip
+Creative Cloud Files	Pictures		stuff
+Desktop			Public			stuff.tar
+Documents		__MACOSX		voteposter.indd
+Downloads		google.html		xgen
 
 ==========
 21. Now compress it!  Type:
@@ -217,7 +285,15 @@ gzip stuff.tar
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
 
-
+G608-19:~ student$ gzip stuff.tar
+G608-19:~ student$ ls
+Adlm			Library			mtec1002
+Adobe			Movies			mtec1002-lab-02
+Applications		Music			mtec1002-lab-02.zip
+Creative Cloud Files	Pictures		stuff
+Desktop			Public			stuff.tar.gz
+Documents		__MACOSX		voteposter.indd
+Downloads		google.html		xgen
 
 ==========
 22. Move stuff.tar.gz into the lab directory that we downloaded.  We didn't learn this command yet, so just type in exactly as is:
@@ -231,6 +307,10 @@ Change your directory to mtec1002-lab-02.
 List the files.  Copy and paste the output below (stuff.tar.gz should be there).
 ----------
 
+G608-19:~ student$ mv stuff.tar.gz mtec1002-lab-02
+G608-19:~ student$ cd mtec1002-lab-02
+G608-19:mtec1002-lab-02 student$ ls
+books		logs		stuff.tar.gz	web
 
 ==========
 23. You should be in the lab directory.  Let's uncompress the file.
@@ -239,6 +319,11 @@ $ tar -xvf stuff.tar.gz
 
 List the files.  Copy and paste the output below (the folder, stuff, should be there).
 ----------
+G608-19:mtec1002-lab-02 student$ tar -xvf stuff.tar.gz
+x stuff/
+x stuff/hello.txt
+G608-19:mtec1002-lab-02 student$ ls
+books		logs		stuff		stuff.tar.gz	web
 
 
 
@@ -247,7 +332,7 @@ List the files.  Copy and paste the output below (the folder, stuff, should be t
 [No output]
 ----------
 
-
+cd ~
 
 ==========
 25. Download and uncompress this file using curl and tar -xvf in your home directory:
@@ -259,7 +344,15 @@ REMEMBER to use the -o flag and specifiy a filenmae that ends in .tar.gz
 Write out the commands that you used to do this.
 ----------
 
+G608-19:~ student$ curl -o secret.tar.gz http://foureyes.github.io/mtec1002/labs/02
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  9116  100  9116    0     0  16512      0 --:--:-- --:--:-- --:--:-- 16484
 
+
+G608-19:~ student$ tar -xvf secret.tar.gz
+tar: Unrecognized archive format
+tar: Error exit delayed from previous errors.
 
 ==========
 26. How many files were in the archive.  What were their names?  Write out your answers below.
